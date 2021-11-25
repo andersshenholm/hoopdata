@@ -1,0 +1,141 @@
+/*
+   Avery Hall and Anders Shenholm
+   November 23, 2021
+*/
+
+/* ------- General ------- */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+table{
+    overflow: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+td, th, tr{
+    border: 1px solid black;
+    font-size: 18px;
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+}
+
+
+.container {
+  border: 0px solid black;
+  background-color: #bcdbdf;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/* ------- Header ----------*/
+
+.header {
+  display: flex;
+  width: 900px;
+  padding-bottom: 5px;
+}
+
+.head-text {
+  padding-top: 30px;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+
+/*------- Player-Info ---------*/
+#player-info-container{
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+}
+
+#bio-container{
+    width: 250px;
+}
+
+#player-stats-container{
+    width: auto;
+    overflow: scroll;
+    float: left;
+}
+
+
+#player-stats-table{
+  border-collapse: separate;
+  border: 1px solid black;
+
+}
+#player-stats-table td, th{
+    font-size: 0.9em;
+}
+
+/*this applies to the first column that moves when the table scrolls*/
+.player-stats-table-year-cell{
+    position: sticky;
+    left:0;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/*------------ Rankings ------------ */
+
+
+#rankings-table table td{
+    border:0;
+}
+
+#rankings-table table th{
+    border:0;
+}
+
+#rankings-table table{
+    border:0;
+}
+
+#rankings-table p{
+    padding:10px
+}
+
+
+/* ---------- Nav bar ------------ */
+
+ul.horizontal-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bcdbdf;
+}
+
+ul.horizontal-navbar li {
+    float: left;
+}
+
+ul.horizontal-navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal-navbar li a:hover {
+    background-color: #40a8c4;
+    color: white;
+}

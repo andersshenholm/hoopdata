@@ -1,0 +1,58 @@
+<!--
+    index.html
+    Anders Shenholm and Avery Hall
+    November 23, 2021
+
+    index page for Hoopdata web app
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+        <title>NBA Players</title>
+    </head>
+
+    <div class="header">
+      <div>
+        <a href="/"><img src="{{ url_for('static', filename='images/hoopdatalogo.png') }}" height="90" width="110"></a>
+      </div>
+      <div>
+        <h1 class="head-text">Home</h1>
+      </div>
+    </div>
+
+
+    <ul class="horizontal-navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/player-info">Player Info</a></li>
+        <li><a href="/rankings">Player Rankings</a></li>
+        <li><a href="/rosters">Team Rosters</a></li>
+    </ul>
+
+    <br>
+    <h2>Welcome to HOOPDATA!</h2>
+    <h3>Make a navbar selection to start a search, or keep reading to learn how to use the site.</h3>
+
+
+    <div class='container'>
+    <h3>About the Site</h3>
+    <p>HOOPDATA allows users to search detailed NBA stats and information between 1950 and 2017.</p>
+    <ul>
+    <li><p>On the <b><a href="/player-info">Player Info</a></b> page, users can enter a player's name (or part of a name
+      and make a selection from the dropdown) to see biographical information and detailed career stats
+      for that player. Users can toggle the checkboxes to show/hide box-score and advanced stats in addition to
+      the base stats. The stats table may require side-scrolling to view all columns. </p></li>
+    <li><p>On the <b><a href="/rankings">Player Rankings</a></b> page, users can select a team and corresponding year of play
+      to see six categories of statistical rankings for that team's roster that year.</p></li>
+    <li><p>On the <b><a href="/rosters">Team Rosters</a></b> page, users can select a team and corresponding year of play
+      to see the full team roster that year.</p></li>
+    </ul>
+    <p>On each page, players and teams alike provide links to appropriate results on other pages. For example, when on the
+      Player Info page for Stephen Curry, clicking on "GSW" in one of the season rows will take the user to the roster page
+      for the Golden State Warriors in that season.</p>
+    </div>
+
+</html>

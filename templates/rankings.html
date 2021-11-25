@@ -1,0 +1,85 @@
+<!--
+    rankings.html
+    Anders Shenholm and Avery Hall
+    November 23, 2021
+
+    rankings page for Hoopdata web app
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+  <script type="text/javascript" src="{{ url_for('static', filename='basketball.js') }}" ></script>
+  <title>Rankings</title>
+</head>
+
+<body>
+
+  <div class="header">
+    <div>
+      <a href="/"><img src="{{ url_for('static', filename='images/hoopdatalogo.png') }}" height="90" width="110"></a>
+    </div>
+    <div>
+      <h1 class="head-text">Player Statistical Rankings</h1>
+    </div>
+  </div>
+
+  <ul class="horizontal-navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/player-info">Player Info</a></li>
+      <li><a href="/rankings">Player Rankings</a></li>
+      <li><a href="/rosters">Team Rosters</a></li>
+  </ul>
+
+  <br>
+    <div>
+    <!--handling variables from when flask loads a template. teamName and year are user inputs via dropdown selections (or setting an url)-->
+    <label for="rankings-team-selector">Team </label>
+       {% if teamName %}
+          <select id="rankings-team-selector" name="teams" class={{teamName}}></select>
+        {% else %}
+          <select id="rankings-team-selector" name="teams"></select>
+        {% endif %}
+
+       <label for="rankings-year-selector">Year </label>
+       {% if year %}
+          <select id="rankings-year-selector" name="years" class={{year}}></select>
+        {% else %}
+          <select id="rankings-year-selector" name="years"></select>
+        {% endif %}
+    </div>
+
+
+    <!--
+      <label for="teams">Select a team (or all-NBA):</label>
+      <select name="time-frames" class="time-frames">
+        <option value="Single year">All NBA</option>
+        <option value="Year range">Warriors</option>
+        <option value="All time">Suns</option>
+        <option value="All time">Celtics</option>
+        <option value="All time">Hornets</option>
+      </select><br><br>
+
+      <label for="time-frames">Select a time frame:</label>
+      <select name="time-frames" id="time-frames">
+        <option value="Single year">Single year</option>
+        <option value="Year range">Year range</option>
+        <option value="All time">All time</option>
+      </select>
+
+      <p>If year range selected, enter start and end year:</p>
+      <input type="integer" id="syear" name="syear">
+      <input type="integer" id="eyear" name="eyear"><br><br><br>
+    -->
+
+<br>
+
+<div class='container'>
+  <table id="rankings-table"></table>
+</div>
+
+</body>
+</html>
