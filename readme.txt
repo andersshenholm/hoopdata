@@ -9,6 +9,14 @@ STATUS: Running as planned. Tested on Google Chrome and Safari.
 
 Basic startup info:
 
+Required packages:
+- psycopg2
+- flask
+
+Note for mac with homebrew - you can install simply with : 
+python3 -m pip install psycopg2 /OR/ pip install psycopg2
+python3 -m pip install flask /OR/ pip install flask
+
 Database set-up:
 
 In psql: CREATE DATABASE [database_name];
