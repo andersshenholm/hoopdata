@@ -21,7 +21,7 @@ Create a python file in the main directory named config.py
 It should contain:
 user = '[psql_username]'
 database = '[database_name]'
-password: ''
+password = ''
 
 Running the app:
 
